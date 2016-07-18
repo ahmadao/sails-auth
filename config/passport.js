@@ -19,6 +19,16 @@ module.exports.passport = {
     strategy: require('passport-http').BasicStrategy,
     protocol: 'basic'
   },
+  
+  facebook: {
+    name: 'Facebook',
+    protocol: 'oauth2',
+    strategy: require('passport-facebook').Strategy,
+    options: {
+      clientID: 'your-client-id',
+      clientSecret: 'your-client-secret'
+    }
+  }
 
   /*
   bearer: {
